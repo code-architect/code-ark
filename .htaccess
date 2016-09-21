@@ -1,0 +1,11 @@
+#RewriteEngine On
+#DirectoryIndex public/index.php public/index.html
+
+RewriteEngine On
+RewriteBase /sand_box/code_ark/
+
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+
+RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+
