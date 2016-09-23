@@ -15,6 +15,12 @@ class Router
      */
     protected $routes = [];
 
+    /**
+     * Parameters from the matched route
+     * @var array
+     */
+    protected $params = [];
+
     //----------------------------------------------------------------------------------------------------------------//
 
 
@@ -41,6 +47,42 @@ class Router
     public function getRoutes()
     {
         return $this->routes;
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------//
+
+
+    /**
+     * Match the route to the routes in the matching tabel, setting the $params property if a route is found.
+     *
+     * @param string $url The route url
+     * @return bool true if matched, false otherwise.
+     */
+    public function match($url)
+    {
+        foreach ($this->routes as $route => $params)
+        {
+            if($url == $route){
+                $this->params = $params;
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------//
+
+
+    /**
+     * Get the currently matched parameters
+     *
+     * @return array
+     */
+    public function getParams()
+    {
+        return $this->params;
     }
 
     //----------------------------------------------------------------------------------------------------------------//
