@@ -18,9 +18,9 @@ $router = new Router();
 
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
 $router->add('posts', ['controller' => 'Posts', 'action' => 'index']);
-//$router->add('posts/new', ['controller' => 'Posts', 'action' => 'new']);
 $router->add('{controller}/{action}');
 $router->add('admin/{controller}/{action}');
+$router->add('{controller}/{id:\d+}/{action}');
 
 // Match the requested route
 $url = $_SERVER['QUERY_STRING'];
