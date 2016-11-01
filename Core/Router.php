@@ -80,7 +80,7 @@ class Router
             if(preg_match($route, $url, $matches))
             {
                 // Get named capture group values
-                $params = [];
+                //$params = [];
 
                 foreach ($matches as $key => $match) {
                     if(is_string($key)){
@@ -109,4 +109,86 @@ class Router
     }
 
     //----------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Dispatch the route create the controller object and run the action method
+     *
+     * @param $url
+     *
+     * @return void
+     */
+    public function dispatch($url)
+    {
+        // matching the url, like in the front controller
+        if($this->match($url))
+        {
+            // if we get a match with the routing table, we get the controller parameter
+            $controller = $this->params['controller'];
+            // and convert it to the StudlyCaps
+            $controller = $this->convertToStudlyCaps($controller);
+
+            //checking if the class exists, then create the new object of that class
+            if(class_exists($controller))
+            {
+                $controller_object = new $controller();
+
+                // if we get a match with the routing table, we get the action parameter
+                $action = $this->params['action'];
+                // and convert it to the camelCase
+                $action = $this->convertToCamelCase($action);
+
+                // if action exists then call it
+                if(is_callable([$controller_object, $action]))
+                {
+                    $controller_object->$action();
+                } else {
+                    echo "Method $action (in controller $controller) not found";
+                }
+            }else {
+                echo "Controller class $controller not found";
+            }
+        }else {
+            echo "No route Matched";
+        }
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------//
+
+
+    /**
+     * Convert the strings with hyphens to StudlyCaps
+     * e.g. post-author => PostAuthors
+     *
+     * @param $controller $string the string convert
+     *
+     * @return string
+     */
+    public function convertToStudlyCaps($controller)
+    {
+        return str_replace(' ', '', ucwords(str_replace('-',' ', $controller)));
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------//
+
+
+    /**
+     * Convert the strings with hyphens to camelCase
+     * e.g. add-new => addNew
+     *
+     * @param $action
+     *
+     * @return string
+     */
+    public function convertToCamelCase($action)
+    {
+        return lcfirst($this->convertToStudlyCaps($action));
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------//
+
+
+//----------------------------------------------------------------------------------------------------------------//
 } 

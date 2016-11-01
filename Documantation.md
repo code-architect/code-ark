@@ -3,6 +3,7 @@
 
 ## _**Features**_
 * Pretty URLs
+* PSR-1 Coding standards 
 
 
 ## **Configure** 
@@ -14,3 +15,9 @@ or use the .htaccess file just change the __"RewriteBase /Your-project/"__ to yo
 
 ## **Pretty or Vanity URLs**
  To get pretty url just change the __"RewriteBase /sand_box/code_ark/"__ of .htaccess in public folder to your root directory.
+ 
+## **Controller and Action**
+Words separated in the URL by __hyphens__. <br> 
+Controller classes are named using __StudlyCaps__ (PSR-1 coding standard)<br>
+Action methods are named using __camelCase__
+
