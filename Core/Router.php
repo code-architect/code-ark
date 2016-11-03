@@ -1,4 +1,6 @@
 <?php
+
+namespace Core;
 /**
  * Created by Code-Architect.
  *
@@ -126,6 +128,7 @@ class Router
             $controller = $this->params['controller'];
             // and convert it to the StudlyCaps
             $controller = $this->convertToStudlyCaps($controller);
+            $controller = "App\Controllers\\$controller";
 
             //checking if the class exists, then create the new object of that class
             if(class_exists($controller))
