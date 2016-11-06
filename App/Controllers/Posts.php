@@ -38,7 +38,7 @@ class Posts extends Controller
     public function edit()
     {
         echo "Hello from edit action of Posts controller";
-        echo "<p>Query String Parameters<pre>".htmlspecialchars(print_r($this->route_param true)) ."</pre></p>";
+        echo "<p>Query String Parameters<pre>".htmlspecialchars(print_r($this->route_param, true)) ."</pre></p>";
     }
 
 
