@@ -135,7 +135,7 @@ class Router
             //checking if the class exists, then create the new object of that class
             if(class_exists($controller))
             {
-                $controller_object = new $controller();
+                $controller_object = new $controller($this->params);
 
                 // if we get a match with the routing table, we get the action parameter
                 $action = $this->params['action'];
@@ -230,4 +230,4 @@ class Router
 
 
 //----------------------------------------------------------------------------------------------------------------//
-} 
+}
