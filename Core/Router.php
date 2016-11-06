@@ -121,6 +121,8 @@ class Router
      */
     public function dispatch($url)
     {
+        $url = $this->removeQueryStringVariables($url);
+
         // matching the url, like in the front controller
         if($this->match($url))
         {
@@ -187,6 +189,40 @@ class Router
     public function convertToCamelCase($action)
     {
         return lcfirst($this->convertToStudlyCaps($action));
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * OUTPUT
+     * __________________________________________________________________________________
+     * localhost/?page=1                    page=1                          ''
+     * localhost/posts?page=1               posts&page=1                    posts
+     * localhost/posts/index                posts/index                     posts/index
+     * localhost/posts/index&page=1         posts/index&page=1              posts/index
+     * __________________________________________________________________________________
+     *
+     * A URL of the format localhost/?page (one variable name, no value) won't work, however
+     * The .htaccess file converts the first ? to a & when it's passed through to the $_SERVER variable.
+     *
+     * @param string $url the full url
+     *
+     * @return string
+     */
+    public function removeQueryStringVariables($url)
+    {
+        if($url != '')
+        {
+            $parts = explode('&' , $url, 2);
+
+            if(strpos($parts[0], '=') === false){
+                $url = $parts[0];
+            } else {
+                $url = '';
+            }
+        }
+        return $url;
     }
 
 

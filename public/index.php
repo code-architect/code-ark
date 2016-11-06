@@ -52,3 +52,4 @@ $router->add('{controller}/{id:\d+}/{action}');
 
 
 $router->dispatch($_SERVER['QUERY_STRING']);
+

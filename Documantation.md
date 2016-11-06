@@ -4,6 +4,7 @@
 ## _**Features**_
 * Pretty URLs
 * PSR-1 Coding standards 
+* Autoload Classes
 
 
 ## **Configure** 

@@ -18,6 +18,8 @@ class Posts
     public function index()
     {
         echo "Hello from index action of Posts controller";
+        echo "<p>Query String Parameters<pre>".htmlspecialchars(print_r($_GET, true)) ."</pre></p>";
+
     }
 
 
