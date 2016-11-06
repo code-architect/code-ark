@@ -41,6 +41,6 @@ class Posts extends Controller
         echo "<p>Query String Parameters<pre>".htmlspecialchars(print_r($this->route_param, true)) ."</pre></p>";
     }
 
-
+ 
 }
 
