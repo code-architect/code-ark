@@ -1,13 +1,15 @@
 <?php
 
 namespace App\Controllers;
+use Core\Controller;
+
 /**
  * Home controller
  *
  * PHP Version 5.6
  */
 
-class Home
+class Home extends Controller
 {
 
     /**
