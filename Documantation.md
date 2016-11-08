@@ -20,5 +20,23 @@ or use the .htaccess file just change the __"RewriteBase /Your-project/"__ to yo
 ## **Controller and Action**
 Words separated in the URL by __hyphens__. <br> 
 Controller classes are named using __StudlyCaps__ (PSR-1 coding standard)<br>
-Action methods are named using __camelCase__
+Action methods are named using __camelCase__ <br>
+__******************************************************************************__ <br>
+Add a suffix to the method name, we need specify that any actions added to controllers will need to have this suffix <br> <br>
+<pre><code>
+class Posts<br>
+{<br>
+    public function indexAction()<br>
+    {<br>
+        // show all posts<br>
+    }<br>
+    public function showAction()<br>
+    {<br>
+            // show all posts<br>
+    }<br>
+}
+</code></pre>
 
+
+if we return false from the __before__ method from the implemented class, it won't execute the originally called method
+ and this is useful for example for checking to see if the user had logged in or had the correct permission. It's very useful for things like authentication. 

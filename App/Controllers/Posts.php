@@ -17,7 +17,7 @@ class Posts extends Controller
      *
      * @return void
      */
-    public function index()
+    public function indexAction()
     {
         echo "Hello from index action of Posts controller";
         echo "<p>Query String Parameters<pre>".htmlspecialchars(print_r($_GET, true)) ."</pre></p>";
@@ -30,17 +30,17 @@ class Posts extends Controller
      *
      * @return void
      */
-    public function addNew()
+    public function addNewAction()
     {
         echo "Hello from addNew action of Posts controller";
     }
 
-    public function edit()
+    public function editAction()
     {
         echo "Hello from edit action of Posts controller";
         echo "<p>Query String Parameters<pre>".htmlspecialchars(print_r($this->route_param, true)) ."</pre></p>";
     }
 
- 
+
 }
 

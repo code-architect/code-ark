@@ -17,9 +17,27 @@ class Home extends Controller
      *
      * @return void
      */
-    public function index()
+    public function indexAction()
     {
         echo "Hello from index action of Home controller";
+    }
+
+
+    /**
+     * after filter
+     */
+    protected function before()
+    {
+        echo "(before)";
+        return false;
+    }
+
+    /**
+     * Before filter
+     */
+    protected function after()
+    {
+        echo "(after)";
     }
 
 
