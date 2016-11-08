@@ -130,7 +130,8 @@ class Router
             $controller = $this->params['controller'];
             // and convert it to the StudlyCaps
             $controller = $this->convertToStudlyCaps($controller);
-            $controller = "App\Controllers\\$controller";
+            //$controller = "App\Controllers\\$controller";
+            $controller = $this->getNamespace().$controller;
 
             //checking if the class exists, then create the new object of that class
             if(class_exists($controller))
@@ -227,6 +228,26 @@ class Router
 
 
     //----------------------------------------------------------------------------------------------------------------//
+
+    /**
+     * Get the namespace for the controller class. The namespace defined in the route parameters is added if present.
+     *
+     * @return string
+     */
+    protected function getNamespace()
+    {
+        // Default namespace
+        $namespace = 'App\Controllers\\';
+
+        // if the parameter name has been passed in,
+        // we add it to the already defined namespace
+        if(array_key_exists('namespace', $this->params))
+        {
+            $namespace .= $this->params['namespace'] . '\\';
+        }
+
+        return $namespace;
+    }
 
 
 //----------------------------------------------------------------------------------------------------------------//
