@@ -210,7 +210,7 @@ class Router
      *
      * @return string
      */
-    public function removeQueryStringVariables($url)
+    protected function removeQueryStringVariables($url)
     {
         if($url != '')
         {
