@@ -8,7 +8,6 @@
 * Action Filters
 
 
-
 ## **Configure** 
 To have the public folder as the web root we need to configure the web server so the root is not the current root, but is
 the public folder.
@@ -80,3 +79,5 @@ $router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
 </code></pre>
 
 ## **Views**
+
+Views have output escaping

@@ -20,7 +20,10 @@ class Home extends Controller
      */
     public function indexAction()
     {
-        View::render('Home/index.php');
+        View::render('Home/index.php',[
+            'name' => 'Raj',
+            'city' => ['kolkata'=>'1', 'agra'=>'12', 'delhi'=>'13']
+        ]);
     }
 
 
