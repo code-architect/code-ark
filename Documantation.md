@@ -8,6 +8,7 @@
 * Action Filters
 
 
+
 ## **Configure** 
 To have the public folder as the web root we need to configure the web server so the root is not the current root, but is
 the public folder.
@@ -44,6 +45,14 @@ class Posts<br>
 if we return false from the __before__ method from the implemented class, it won't execute the originally called method
  and this is useful for example for checking to see if the user had logged in or had the correct permission. 
  It's very useful for things like authentication. 
+ 
+ <pre><code>
+ protected function before()<br>
+     {<br>
+         echo "(before)";<br>
+         return false;<br>
+     }
+ </code></pre>
   
 ************************************************************************************************************************<br>
 ### __Organized  controllers in subdirectories: Routes with namespace__
@@ -69,3 +78,5 @@ $router->add('{controller}/{id:\d+}/{action}');
 // adding the Admin subdirectory in the Controllers directory under App root directory
 $router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
 </code></pre>
+
+## **Views**
