@@ -31,15 +31,13 @@
     <br/><br/><br/><br/>
     <?php
 
-
-   echo htmlspecialchars($name);
-
-    echo "<br>";
-
-    foreach($city as $cit)
-    {
-        echo $cit."<br>";
+    foreach($city[2] as $key=>$val){
+        echo $key." => ".$val;
     }
+    echo "<pre>";
+
+    print_r($city);
+
 
     ?>
 

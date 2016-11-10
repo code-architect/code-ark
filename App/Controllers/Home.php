@@ -20,10 +20,12 @@ class Home extends Controller
      */
     public function indexAction()
     {
-        View::render('Home/index.php',[
-            'name' => 'Raj',
-            'city' => ['kolkata'=>'1', 'agra'=>'12', 'delhi'=>'13']
-        ]);
+        $arr = ['12', '13', '14'];
+        $arr2 = ['ok', 'see', 'you'];
+        $arr3 = ['name'=>'skull', 'home'=>'earth'];
+
+        View::render('Home/index.php',['name' => 'Raj',
+            'city' => [$arr, $arr2, $arr3]]);
     }
 
 
