@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twig Home</title>
+</head>
+<body>
+    <p>{{ name }}</p>
+    <hr/>
+
+    <h2>Example of array in foreach</h2>
+    <ul>
+        {% for num in numbers %}
+        <li>{{ num }}</li>
+        {% endfor %}
+    </ul>
+    <hr/>
+
+    <h2>Example of Key Value</h2>
+    {% for key, user in details %}
+    <li>{{ key }}: {{ user }}</li>
+    {% endfor %}
+
+</body>
+</html>

@@ -24,8 +24,9 @@ class Home extends Controller
         $arr2 = ['ok', 'see', 'you'];
         $arr3 = ['name'=>'skull', 'home'=>'earth'];
 
-        View::render('Home/index.php',['name' => 'Raj',
-            'city' => [$arr, $arr2, $arr3]]);
+        /*View::render('Home/index.php',['name' => 'Raj',
+            'city' => [$arr, $arr2, $arr3]]); */
+        View::renderTemplate('Home/index.html', ['name' => 'Architect','numbers'=>$arr, $arr2, 'details'=>$arr3]);
     }
 
 
