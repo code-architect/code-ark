@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use Core\Controller;
+use Core\View;
 
 /**
  * Posts controller
@@ -19,9 +20,7 @@ class Posts extends Controller
      */
     public function indexAction()
     {
-        echo "Hello from index action of Posts controller";
-        echo "<p>Query String Parameters<pre>".htmlspecialchars(print_r($_GET, true)) ."</pre></p>";
-
+        View::renderTemplate('Posts/index.html');
     }
 
 

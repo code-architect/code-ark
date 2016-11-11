@@ -80,4 +80,5 @@ $router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
 
 ## **Views**
 
-Views have output escaping
+Views have output escaping<br>
+__Using Twig template engine.__
