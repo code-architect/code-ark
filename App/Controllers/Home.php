@@ -22,7 +22,7 @@ class Home extends Controller
     {
         $arr = ['12', '13', '14'];
         $arr2 = ['ok', 'see', 'you'];
-        $arr3 = ['name'=>'skull', 'home'=>'earth'];
+        $arr3 = ['name'=>'Code', 'home'=>'earth'];
 
         /*View::render('Home/index.php',['name' => 'Raj',
             'city' => [$arr, $arr2, $arr3]]); */
