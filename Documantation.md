@@ -6,6 +6,7 @@
 * PSR-1 Coding standards 
 * Autoload Classes
 * Action Filters
+* Added Twig template and Twig rendered views 
 
 
 ## **Configure** 
@@ -80,5 +81,32 @@ $router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
 
 ## **Views**
 
-Views have output escaping<br>
-__Using Twig template engine.__
+Have two kinds of rendering options 
+
+* PHP rendering
+<pre><code> 
+View::render('Posts/index.php')
+</code></pre>
+
+* Twig template rendering
+<pre><code> 
+View::render('Posts/index.html')
+</code></pre>
+Views have output escaping __Using Twig template engine.__
+
+__Passing data to the view in PHP__
+             <pre><code> 
+               $arr = ['12', '13', '14'];<br>
+               $arr2 = ['ok', 'see', 'you'];<br>
+               $arr3 = ['name'=>'skull', 'home'=>'earth'];<br>
+               View::render('Home/index.php',['name' => 'Architect',<br>
+               'city' => [$arr, $arr2, $arr3]]);
+             </code></pre>
+
+__Passing data to the view in Twig__
+<pre><code> 
+  $arr = ['12', '13', '14'];<br>
+  $arr2 = ['ok', 'see', 'you'];<br>
+  $arr3 = ['name'=>'skull', 'home'=>'earth'];<br>
+  View::renderTemplate('Home/index.html', ['name' => 'Architect','numbers'=>$arr, $arr2, 'details'=>$arr3]);
+</code></pre>
