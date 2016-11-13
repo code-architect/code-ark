@@ -7,6 +7,7 @@
 * Autoload Classes
 * Action Filters
 * Added Twig template and Twig rendered views 
+* PDO Database connection
 
 
 ## **Configure** 
@@ -110,3 +111,11 @@ __Passing data to the view in Twig__
   $arr3 = ['name'=>'skull', 'home'=>'earth'];<br>
   View::renderTemplate('Home/index.html', ['name' => 'Architect','numbers'=>$arr, $arr2, 'details'=>$arr3]);
 </code></pre>
+
+## **Models**
+
+ Cache database connection
+ 
+ Change Database information in the App/Config.php file. 
+
+
