@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Core\Model;
 use PDO;
 
 /**
@@ -9,7 +10,7 @@ use PDO;
  *
  * PHP Version 5.6
  */
-class Post
+class Post extends Model
 {
 
     /**
@@ -19,13 +20,8 @@ class Post
      */
     public static function getAll()
     {
-        $host       = 'localhost';
-        $dbname     = 'code_ark';
-        $username   = 'root';
-        $password   = '';
-
         try{
-            $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+            $db = static::getDB();
 
             $stmt = $db->query("SELECT id, title, content FROM `posts` ORDER BY created_at");
             if($stmt !== false)

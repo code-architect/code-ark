@@ -22,7 +22,7 @@ class Posts extends Controller
     public function indexAction()
     {
         $posts = Post::getAll();
-        
+
         View::renderTemplate('Posts/index.html', ['posts' => $posts]);
     }
 
