@@ -28,4 +28,9 @@ class Config
      * Database Password
      */
     const DB_PASSWORD = '';
+
+    /**
+     * Show or Hide error messages
+     */
+    const SHOW_ERRORS = true;
 }
