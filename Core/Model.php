@@ -14,7 +14,9 @@ abstract class Model
 {
 
     /**
-     * Get the PDO
+     * Get the PDO Database Connection
+     *
+     * @return Mixed
      */
     protected static function getDB()
     {
@@ -22,16 +24,14 @@ abstract class Model
 
         if($db === null)
         {
-            try
-            {
-                $dsn = "mysql:host=".Config::DB_HOST.";dbname=".Config::DB_NAME.";charset=utf8";
+            $dsn = "mysql:host=".Config::DB_HOST.";dbname=".Config::DB_NAME.";charset=utf8";
 
-                $db = new PDO($dsn, Config::DB_USER, Config::DB_PASSWORD);
-                return $db;
-            }catch (\PDOException $e)
-            {
-                echo $e->getMessage();
-            }
+            $db = new PDO($dsn, Config::DB_USER, Config::DB_PASSWORD);
+
+            // Throw an exception when an error occurs
+            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            return $db;
         }
     }
 
