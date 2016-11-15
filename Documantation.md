@@ -16,6 +16,11 @@
 
 
 ## **Configure** 
+Configure the root of the web server. Go to apache configuration section, then go to localhost virtual host settings and change the __DocumentRoot__ directive
+__"{path}/www"__ to __"{path}/www/public"__ <br>
+attaching the image of framework folder structure
+  ![Code-Ark by codearchitect.in](framework_ark.png)
+
 To have the public folder as the web root we need to configure the web server so the root is not the current root, but is
 the public folder.
 Go to Apache configuration, and find "Localhost VirtualHost" settings, and change the DocumentRoot directive.
