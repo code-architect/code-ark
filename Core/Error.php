@@ -60,12 +60,7 @@ namespace Core;
              $message .=    "\nThrown in '" . $exception->getFile() . "' on line " . $exception->getLine();
 
              error_log($message);
-             if($code == 404)
-             {
-                 echo "<h1>Page Not Found</h1>";
-             }else{
-                 echo "<h1>An Error Occurred</h1>";
-             }
+             View::renderTemplate("$code.html");
          }
      }
 

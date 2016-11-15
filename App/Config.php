@@ -32,5 +32,5 @@ class Config
     /**
      * Show or Hide error messages
      */
-    const SHOW_ERRORS = true;
+    const SHOW_ERRORS = false;
 }

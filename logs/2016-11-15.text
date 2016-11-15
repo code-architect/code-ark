@@ -1,0 +1,24 @@
+[15-Nov-2016 12:20:05 Europe/Berlin] Uncaught exception: 'Exception' with Message: 'No route Matched'
+Stack trace:#0 D:\xampp\htdocs\sand_box\code_ark\public\index.php(66): Core\Router->dispatch('home/posts/inde...')
+#1 {main}
+Thrown in 'D:\xampp\htdocs\sand_box\code_ark\Core\Router.php' on line 157
+[15-Nov-2016 12:20:08 Europe/Berlin] Uncaught exception: 'Exception' with Message: 'No route Matched'
+Stack trace:#0 D:\xampp\htdocs\sand_box\code_ark\public\index.php(66): Core\Router->dispatch('home/posts/inde...')
+#1 {main}
+Thrown in 'D:\xampp\htdocs\sand_box\code_ark\Core\Router.php' on line 157
+[15-Nov-2016 12:20:16 Europe/Berlin] Uncaught exception: 'Exception' with Message: 'No route Matched'
+Stack trace:#0 D:\xampp\htdocs\sand_box\code_ark\public\index.php(66): Core\Router->dispatch('home/posts/inde...')
+#1 {main}
+Thrown in 'D:\xampp\htdocs\sand_box\code_ark\Core\Router.php' on line 157
+[15-Nov-2016 12:20:20 Europe/Berlin] Uncaught exception: 'Exception' with Message: 'No route Matched'
+Stack trace:#0 D:\xampp\htdocs\sand_box\code_ark\public\index.php(66): Core\Router->dispatch('posts/home/inde...')
+#1 {main}
+Thrown in 'D:\xampp\htdocs\sand_box\code_ark\Core\Router.php' on line 157
+[15-Nov-2016 12:20:28 Europe/Berlin] Uncaught exception: 'Exception' with Message: 'No route Matched'
+Stack trace:#0 D:\xampp\htdocs\sand_box\code_ark\public\index.php(66): Core\Router->dispatch('posts/home/inde...')
+#1 {main}
+Thrown in 'D:\xampp\htdocs\sand_box\code_ark\Core\Router.php' on line 157
+[15-Nov-2016 12:26:08 Europe/Berlin] Uncaught exception: 'Exception' with Message: 'No route Matched'
+Stack trace:#0 D:\xampp\htdocs\sand_box\code_ark\public\index.php(66): Core\Router->dispatch('products.php/')
+#1 {main}
+Thrown in 'D:\xampp\htdocs\sand_box\code_ark\Core\Router.php' on line 157
