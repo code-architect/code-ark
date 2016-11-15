@@ -11,6 +11,8 @@
 * Exception Handler and Error Handler
 * Error Log
 * Development and Production Mode
+* HTTP status code based Error
+* Custom 404 and 500 error message display page for production level 
 
 
 ## **Configure** 
@@ -123,7 +125,11 @@ __Passing data to the view in Twig__
 
 ## **Exception Handler**
 
-Converting errors into exception and then handling them, exceptions have the added benefit of having a __stack trace__, which
- is helpful when debugging.
+Converting errors into exception and then handling them, exceptions have the added benefit of having a __stack trace__, 
+which is helpful when debugging.
  
  Change the __const SHOW_ERRORS__ in the config.php to toggle between development and user mode.
+ 
+------------------------------------------------------------------------------------------------------------------------
+ 
+ 
