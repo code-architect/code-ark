@@ -1,7 +1,7 @@
 # Code Ark
 ![Code-Ark by codearchitect.in](code-ark.png)
 
-This is a simple yet powerful PHP MVC Based Framework. i have attached a full documentation file, please find the attached document for your reference.
+This is a simple yet powerful PHP MVC Based Framework. i have attached a full [documentation](https://github.com/code-architect/code-ark/blob/master/Documantation.md) file, please find the attached document for your reference.
 I have listed the features of this framework downwards: 
 ## _**Features**_
 * Pretty URLs
@@ -18,7 +18,7 @@ I have listed the features of this framework downwards:
 
 ---
 
-Please visit my Blog [Code-Architect](../blob/master/LICENSE) for more information or to contact me.
+Please visit my Blog [Code-Architect](http://codearchitect.in/) for more information or to contact me.
 Every kind of suggestions are welcome, and if you find a bug or an error please inform me.You can contribute to make this 
 Framework better.
 
